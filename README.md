@@ -10,16 +10,16 @@ This portfolio showcases selected non-sensitive projects across my academic and 
 
 ## 🔍 Featured Projects
 
-- 📊 [Global Jam Reduction Program](./Global-Jam-Program/)  
+- 📊 [Global Jam Reduction Program](./Global-Jam-Reduction/)  
   Reduced equipment defects (DPMO) and improved operational throughput across global Amazon fulfillment centers
 
-- 🔄 [Global Asset Lifecycle Program](./Global-Asset-Lifecycle/)  
+- 🔄 [Global Asset Lifecycle Program](./Global-Asset-LifeCycle/)  
   Built a labor planning tool and centralized parts strategy that saved $3M+ in critical MHE asset rebuild operations
 
 - 🎓 [University Projects](./University-Projects/)  
   Includes Agile MBA capstone, Tableau/Power BI dashboards, and an econometric research paper on red wine quality
 
-- 🧪 [Wine Quality Analysis – Economics Research](./Wine-Quality-Economics/)  
+- 🧪 [Wine Quality Analysis – Economics Research](./University-Projects/Econ Research Paper/)  
   Applied regression modeling to explore which chemical components of red wine influence sensory quality
 
 ## 🛠️ Skills & Tools
