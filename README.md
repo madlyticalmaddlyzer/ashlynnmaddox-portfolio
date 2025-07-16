@@ -19,7 +19,7 @@ This portfolio showcases selected non-sensitive projects across my academic and 
 - 🎓 [University Projects](./University-Projects/)  
   Includes Agile MBA capstone, Tableau/Power BI dashboards, and an econometric research paper on red wine quality
 
-- 🧪 [Wine Quality Analysis – Economics Research](./University-Projects/Econ Research Paper/)  
+- 🧪 [Wine Quality Analysis – Economics Research](./University-Projects/Econ Research Paper/)  University-Projects/Econ Research Paper
   Applied regression modeling to explore which chemical components of red wine influence sensory quality
 
 ## 🛠️ Skills & Tools
