@@ -10,7 +10,7 @@
 
 ## 📌 Overview
 
-As part of Amazon's Global Jam Reduction Program, I led data-driven initiatives focused on reducing material handling equipment (MHE) defects and jams across fulfillment centers. These jams were a major source of operational downtime and inefficiency across global sites. My role involved analyzing DPMO (defects per million opportunities) data, building tooling to support cross-site visibility, and implementing strategic interventions at underperforming facilities—partnering directly with engineering, operations, and vendor teams.
+As part of Amazon's Global Jam Reduction Program, I led data-driven initiatives focused on reducing material handling equipment (MHE) defects and jams across fulfillment centers. These jams were a major source of operational downtime and inefficiency across global sites. My role involved analyzing DPMO (defects per million opportunities) data, building tooling to support cross-site visibility, and implementing strategic interventions at underperforming facilities, partnering directly with engineering, operations, and vendor teams.
 
 ---
 
