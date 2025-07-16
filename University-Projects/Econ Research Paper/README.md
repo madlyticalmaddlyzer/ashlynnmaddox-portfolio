@@ -48,9 +48,7 @@ This research project explored which chemical properties of red wine most strong
 
 ## 📂 Key Artifacts
 
-- 📄 [Research Paper – PDF](./wine-quality-research-paper.pdf)
-- 📊 [Regression Output Table (Excel)](./regression-summary.xlsx)
-- 🧪 [Dataset Source (UCI)](https://archive.ics.uci.edu/ml/datasets/wine+quality)
+- 📄[ECO4421 research project.pdf](https://github.com/user-attachments/files/21268407/ECO4421.research.project.pdf)
 
 ---
 
@@ -58,9 +56,4 @@ This research project explored which chemical properties of red wine most strong
 
 This project gave me early exposure to using regression modeling and econometric tools to answer real-world quality and market questions. It built my foundation in hypothesis testing, variable selection, and interpreting model output for strategic recommendations—skills I’ve since refined and scaled in my MBA and Amazon analytics work.
 
----
 
-## 🔗 Related Projects
-
-- [Agile MBA Capstone Project](../Agile-Capstone-Project/README.md)
-- [Global Jam Program – Operational Analytics](../Global-Jam-Program/README.md)
