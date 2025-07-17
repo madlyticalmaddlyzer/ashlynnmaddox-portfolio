@@ -6,18 +6,7 @@ I'm an Operations Strategy & Analytics leader with 4+ years of experience at Ama
 
 I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, where I’ve conducted research on topics ranging from wine quality economics to data visualization for operational KPIs.
 
-This portfolio showcases selected non-sensitive projects including:
-
-## 🔍 Featured Projects
-
-- 📊 [Global Jam Reduction Program](./Global-Jam-Reduction/)  
-  Reduced equipment defects (DPMO) and improved operational throughput across global Amazon fulfillment centers
-
-- 🔄 [Global Asset Lifecycle Program](./Global-Asset-LifeCycle/)  
-  Built a labor planning tool and centralized parts strategy that saved $3M+ in critical MHE asset rebuild operations
-
-- 🎓 [University Projects](./University-Projects/)  
-  Includes Agile MBA capstone, Tableau/Power BI dashboards, and an econometric research paper on red wine quality
+This portfolio showcases selected non-sensitive projects across my academic and professional journey.
 
 
 ## 🛠️ Skills & Tools
