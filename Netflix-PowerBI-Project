@@ -1,0 +1,20 @@
+# 📺 Netflix Content & Engagement Dashboard – Power BI Project
+
+This Power BI project simulates the kind of dashboard an analyst at Netflix might build to analyze user engagement and content performance.
+
+## 🔍 Key Features
+- Cleaned and transformed messy data using Power Query
+- Created relationships between user logs and metadata
+- Built visuals to track:
+  - Total watch time, top genres
+  - Top 10 watched titles
+  - User behavior trends by time, region, and device
+- Created DAX measures for average watch time and retention analysis
+
+## 📁 Dataset
+Simulated viewership logs (`netflix_view_logs_dirty.csv`) and content metadata (`netflix_titles.csv`) were used.
+
+## 🛠 Tools
+- Power BI Desktop
+- Power Query
+- DAX
