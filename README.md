@@ -1,26 +1,21 @@
-# 👋 Hi, I'm Ashlynn Maddox
+# 📺 Netflix Content & Engagement Dashboard – Power BI Project
 
-Welcome to my portfolio.
+This Power BI project simulates the kind of dashboard an analyst at Netflix might build to analyze user engagement and content performance.
 
-I'm an Operations Strategy & Analytics leader with 4+ years of experience at Amazon, where I've led global initiatives that delivered over $18M in business impact. My work bridges strategy, data analysis, and cross-functional execution spanning supply chain optimization, process improvement, and internal product development.
+## 🔍 Key Features
+- Cleaned and transformed messy data using Power Query
+- Created relationships between user logs and metadata
+- Built visuals to track:
+  - Total watch time, top genres
+  - Top 10 watched titles
+  - User behavior trends by time, region, and device
+- Created DAX measures for average watch time and retention analysis
 
-I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, where I’ve conducted research on topics ranging from wine quality economics to data visualization for operational KPIs.
+## 📁 Dataset
+Simulated viewership logs (`netflix_view_logs_dirty.csv`) and content metadata (`netflix_titles.csv`) were used.
 
-This portfolio showcases selected non-sensitive projects across my academic and professional journey.
+## 🛠 Tools
+- Power BI Desktop
+- Power Query
+- DAX
 
-
-## 🛠️ Skills & Tools
-
-- **Data & Analytics:** SQL, Python (Pandas, NumPy, Matplotlib), Tableau, Power BI, AWS QuickSight
-- **Operations & Strategy:** SAP, Oracle ERP, Excel, Process Optimization, KPI Design, Project Management (Agile/Scrum)
-- **Soft Skills:** VP-level stakeholder engagement, cross-functional leadership, global implementation
-
----
-
-### 📬 Let's Connect
-
-- 📍 Based in Miami, open to relocation  
-- 📧 [Email Me](mailto:maddoas@proton.me)  
-- 💼 [LinkedIn](https://www.linkedin.com/in/ashlynnmaddox)
-
-Thanks for visiting!
