@@ -14,10 +14,11 @@ This project presents an interactive dashboard designed to guide global companie
 
 ### Key features:
 
-📊 Data Integration: Unified global datasets using Snowflake for fast, scalable querying.
-🧩 Segmentation: Populations segmented by purchasing power, internet connectivity, and tech adoption rates.
-🧠 Launch Readiness Scoring: Custom SQL-based scoring model to assess regional suitability.
-📈 Visual Insights: Interactive dashboard to explore data and identify high-potential markets.
+- 📊 Data Integration: Unified global datasets using Snowflake for fast, scalable querying.
+- 🧩 Segmentation: Populations segmented by purchasing power, internet connectivity, and tech adoption rates.
+- 🧠 Launch Readiness Scoring: Custom SQL-based scoring model to assess regional suitability.
+- 📈 Visual Insights: Interactive dashboard to explore data and identify high-potential markets.
+
 This tool empowers data-driven decision-making for global product rollouts, helping organizations pinpoint where to launch next with confidence.
 
 ---
