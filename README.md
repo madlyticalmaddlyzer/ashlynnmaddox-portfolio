@@ -21,7 +21,7 @@ This Power BI project simulates the kind of dashboard an analyst at Netflix migh
   - Total watch time, top genres
   - Top 10 watched titles
   - User behavior trends by time, region, and device
-- Created DAX measures for average watch time and retention analysis
+
 
 ## 📁 Dataset
 Simulated viewership logs (`netflix_view_logs_dirty.csv`) and content metadata (`netflix_titles.csv`) were used.
