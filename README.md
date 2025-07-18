@@ -9,12 +9,6 @@ I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, 
 This portfolio showcases selected non-sensitive projects across my academic and professional journey.
 
 
-## 🛠️ Skills & Tools
-
-- **Data & Analytics:** SQL, Python (Pandas, NumPy, Matplotlib), Tableau, Power BI, AWS QuickSight
-- **Operations & Strategy:** SAP, Oracle ERP, Excel, Process Optimization, KPI Design, Project Management (Agile/Scrum)
-- **Soft Skills:** VP-level stakeholder engagement, cross-functional leadership, global implementation
-
 ---
 
 ## 🛠️ What I Built
