@@ -9,11 +9,16 @@ I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, 
 This portfolio showcases selected non-sensitive projects across my academic and professional journey.
 
 
-## 🛠️ Skills & Tools
+## 🌍 Geo-Demographic Dashboard for Global Rollouts
+This project presents an interactive dashboard designed to guide global companies in selecting optimal regions for launching new products. By integrating diverse open data sources—including UN statistics, census data, and World Bank indicators—into a centralized Snowflake data warehouse, the dashboard enables scalable analysis of global demographics and market readiness.
 
-- **Data & Analytics:** SQL, Python (Pandas, NumPy, Matplotlib), Tableau, Power BI, AWS QuickSight
-- **Operations & Strategy:** SAP, Oracle ERP, Excel, Process Optimization, KPI Design, Project Management (Agile/Scrum)
-- **Soft Skills:** VP-level stakeholder engagement, cross-functional leadership, global implementation
+### Key features:
+
+📊 Data Integration: Unified global datasets using Snowflake for fast, scalable querying.
+🧩 Segmentation: Populations segmented by purchasing power, internet connectivity, and tech adoption rates.
+🧠 Launch Readiness Scoring: Custom SQL-based scoring model to assess regional suitability.
+📈 Visual Insights: Interactive dashboard to explore data and identify high-potential markets.
+This tool empowers data-driven decision-making for global product rollouts, helping organizations pinpoint where to launch next with confidence.
 
 ---
 
