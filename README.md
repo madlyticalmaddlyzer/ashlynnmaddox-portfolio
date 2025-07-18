@@ -10,7 +10,7 @@ This portfolio showcases selected non-sensitive projects across my academic and 
 
 
 ## 🌍 Geo-Demographic Dashboard for Global Rollouts
-This project presents an interactive dashboard designed to guide global companies in selecting optimal regions for launching new products. By integrating diverse open data sources—including UN statistics, census data, and World Bank indicators—into a centralized Snowflake data warehouse, the dashboard enables scalable analysis of global demographics and market readiness.
+This project presents an interactive dashboard designed to guide global companies in selecting optimal regions for launching new products. By integrating diverse open data sources including UN statistics, census data, and World Bank indicators into a centralized Snowflake data warehouse, the dashboard enables scalable analysis of global demographics and market readiness.
 
 ### Key features:
 
