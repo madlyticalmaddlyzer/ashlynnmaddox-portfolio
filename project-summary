@@ -1,0 +1,33 @@
+Project Summary: 
+
+This Power BI dashboard project focuses on analyzing user watch patterns, content popularity, and engagement metrics for a streaming service. Leveraging data visualized across three key areas—Dashboard Overview, Content Performance, and User Engagement—this analysis provides actionable insights into user behavior and content strategy.
+
+Key Findings and Insights:
+
+1. Dashboard Overview - User Engagement Trends:
+
+
+
+Watch Time Decline in Latter Half of the Year: The "Sum of Watch_Time_Minutes by Watch_Month" trend clearly indicates a significant drop in watch time from July onwards, with the lowest engagement observed in September, October, and November. This suggests potential seasonality or a need to investigate factors leading to decreased viewership in the latter half of the year.
+
+Dominance of Mobile and TV for Watch Time: Devices like Mobile (26.71%) and TV (25.7%) collectively account for over half of the total watch time, with Laptop (25.02%) and Tablet (22.13%) also contributing significantly. This highlights the multi-device nature of consumption and the importance of optimizing content delivery across various platforms.
+
+Watch Time by Year: While 2023 shows higher watch time, 2024 (likely partial data) indicates continued engagement, though at a lower volume. This allows for year-over-year comparison as more data becomes available.
+
+Overall Metrics: The dashboard provides quick KPIs: 419 unique users, 16.86K total watch minutes, and an average rating of 3.01.
+
+
+
+
+
+
+2. Content Performance - Genre and Title Popularity:
+
+Genre Distribution: "Thriller" and "Horror" genres appear to be prominent in terms of content count, with Thriller accounting for 18% (36 titles) and Horror for 15% (30 titles) of the total titles. "Action" and "Comedy" also show substantial representation.
+
+Top-Rated Content: The table highlights specific titles (e.g., "Title_49," "Title_66," "Title_197") with high average ratings (5.00, 5.00, 4.90 respectively), indicating successful content pieces that resonate well with viewers.
+
+Watch Time by Title: The bar chart "Sum of Watch_Time_Minutes by Title" visually represents the long-tail distribution of content consumption, with a few titles (e.g., "Title_128," "Title_155") driving significantly higher watch times compared to the majority. This suggests that while a wide variety of content exists, a smaller subset captures the most viewer attention.
+
+
+
