@@ -1,0 +1,10 @@
+SCHEDULE_ID,SITE_NAME,MAINTENANCE_TYPE,SCHEDULE_FREQUENCY,PERFORMED_BY
+1,WH001,Automation Calibration,Daily,TechOps Robotics
+5,WH005,Emergency Readiness Drill,Quarterly,DisasterOps Team
+2,WH002,Gearbox Inspection,Weekly,Legacy Maintenance Inc
+3,WH003,System Firmware Update,Monthly,SmartSys Engineers
+6,WH006,Post-Retrofit Evaluation,Monthly,RetroSys QA
+4,WH004,Conveyor Realignment,Biweekly,Precision Conveyance Ltd
+7,WH007,Throughput Optimization,Biweekly,FlowLogic Partners
+8,WH008,Electrical Safety Inspection,Monthly,AsiaSafe Electricals
+9,WH009,Post-Repair Validation,Weekly,Ops Assurance

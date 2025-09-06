@@ -1,0 +1,103 @@
+SITE_NAME,WAREHOUSE_LOCATION,GENERATION_TYPE,SISTER_SITE,REPAIR_STATUS,EQUIPMENT_TYPE,LPH,AUTOMATION_LEVEL,AVERAGE_THROUGHPUT,PEAK_HOURS,REGION,PRIMARY_CARRIER,WEATHER_IMPACT,VENDOR,YEAR_BUILT,REPAIR_TYPE_ID
+BOS6,Japan,Gen10,Yes,None,Palletizer,15.5,Low,790193.26,Afternoon,Asia-Pacific,Amazon Logistics,No,Vanderlande,2006,11
+CDG2,Germany,Gen10,Yes,None,Conveyor,30.25,Low,754759.67,Night,North America,Amazon Logistics,No,Vanderlande,2005,11
+SFO7,France,Gen10,Yes,None,Sorter,28.99,Low,726385.16,Night,Europe,Amazon Logistics,Yes,Dematic,2007,11
+SFO4,Japan,Gen11,No,Partial,Robotic Arm,15.5,Medium,1090045.07,Afternoon,Asia-Pacific,DHL,No,Dematic,2016,15
+ORD4,Japan,Gen12,Yes,None,Palletizer,15.5,Highest,1535228.57,Morning,Asia-Pacific,DHL,Yes,Vanderlande,2024,11
+DEN3,Germany,Gen9,Yes,Full,Robotic Arm,30.25,Lowest,431202,Night,North America,Amazon Logistics,No,Dematic,1990,13
+FRA5,Japan,Gen10,Yes,Partial,Packaging Machine,15.5,Low,684278.59,Night,Asia-Pacific,UPS,Yes,Integrated,2005,15
+DFW6,Japan,Gen10,Yes,Partial,Palletizer,15.5,Low,705838.94,Evening,Asia-Pacific,FedEx,Yes,Dematic,2008,15
+MAD5,Spain,Gen12,Yes,None,Sorter,15.5,Highest,1482001.31,Night,Asia-Pacific,FedEx,Yes,Siemens,2021,11
+CDG5,USA,Gen9,Yes,Full,Robotic Arm,28.99,Lowest,407615.39,Night,Europe,UPS,No,Vanderlande,1991,12
+FRA7,UK,Gen12,Yes,Full,Packaging Machine,15.5,Highest,1262846.61,Morning,Asia-Pacific,Amazon Logistics,No,Integrated,2021,14
+SEA7,USA,Gen9,Yes,None,Sorter,30.25,Lowest,418436.52,Night,North America,UPS,Yes,Dematic,1997,11
+FRA2,Germany,Gen12,Yes,Full,Sorter,28.99,Highest,1659302.45,Evening,Europe,Amazon Logistics,Yes,Dematic,2024,11
+CDG6,Germany,Gen10,Yes,Partial,Packaging Machine,15.5,Low,697404.33,Morning,Asia-Pacific,UPS,Yes,Integrated,2007,1
+LAX8,France,Gen11,Yes,Partial,Robotic Arm,15.5,Medium,1070665.32,Night,Asia-Pacific,FedEx,Yes,Dematic,2016,17
+LHR5,USA,Gen11,Yes,Full,Palletizer,28.99,Medium,1037136.54,Evening,Europe,DHL,Yes,Vanderlande,2016,12
+CDG1,Japan,Gen12,Yes,Partial,Robotic Arm,30.25,Highest,1310013.43,Evening,North America,FedEx,Yes,Dematic,2020,10
+DFW2,Japan,Gen11,Yes,None,Packaging Machine,15.5,Medium,1085879.25,Night,Asia-Pacific,Amazon Logistics,Yes,Vanderlande,2015,11
+JFK6,Germany,Gen11,Yes,None,Sorter,15.5,Medium,912685.3,Night,Asia-Pacific,UPS,Yes,Dematic,2014,11
+CDG7,USA,Gen9,No,None,Conveyor,30.25,Lowest,485635.53,Evening,North America,DHL,Yes,Siemens,1999,11
+LAX4,Germany,Gen10,Yes,Partial,Palletizer,30.25,Low,734833.02,Night,North America,UPS,Yes,Vanderlande,2002,11
+BOS2,UK,Gen11,No,Partial,Packaging Machine,15.5,Medium,910959.78,Afternoon,Asia-Pacific,UPS,Yes,Dematic,2016,10
+LHR7,Spain,Gen12,Yes,Full,Sorter,15.5,Highest,1313118.07,Afternoon,Asia-Pacific,DHL,No,Vanderlande,2023,14
+JFK8,Spain,Gen9,No,Partial,Robotic Arm,30.25,Lowest,409127.89,Afternoon,North America,Amazon Logistics,Yes,Siemens,1992,11
+SEA6,France,Gen9,No,Full,Packaging Machine,15.5,Lowest,446107.63,Night,Asia-Pacific,FedEx,No,Vanderlande,1998,13
+DEN7,Spain,Gen12,Yes,Partial,Packaging Machine,28.99,Highest,1362790.32,Morning,Europe,UPS,Yes,Integrated,2024,10
+DFW5,Germany,Gen9,No,None,Robotic Arm,30.25,Lowest,420684.22,Afternoon,North America,Amazon Logistics,Yes,Siemens,1995,11
+JFK2,Spain,Gen12,Yes,None,Conveyor,30.25,Highest,1542409.3,Evening,North America,FedEx,Yes,Vanderlande,2023,11
+DEN1,Spain,Gen9,No,None,Palletizer,28.99,Lowest,446670.12,Evening,Europe,DHL,Yes,Dematic,1999,11
+MAD6,UK,Gen10,Yes,Full,Sorter,30.25,Low,720847.9,Afternoon,North America,UPS,Yes,Dematic,2009,14
+MIA7,USA,Gen9,No,Partial,Robotic Arm,30.25,Lowest,445879.67,Afternoon,North America,FedEx,Yes,Integrated,1994,12
+LHR3,Spain,Gen11,No,None,Palletizer,28.99,Medium,1031488.98,Night,Europe,Amazon Logistics,No,Siemens,2017,11
+SEA2,France,Gen9,No,None,Robotic Arm,30.25,Lowest,417174.04,Night,North America,DHL,No,Dematic,1997,11
+DEN5,USA,Gen10,Yes,Partial,Conveyor,28.99,Low,615911.64,Evening,Europe,UPS,No,Dematic,2008,20
+FRA4,Germany,Gen11,Yes,Full,Robotic Arm,28.99,Medium,900602.19,Morning,Europe,FedEx,Yes,Integrated,2018,8
+JFK3,Germany,Gen12,Yes,None,Packaging Machine,15.5,Highest,1551123.1,Evening,Asia-Pacific,DHL,Yes,Vanderlande,2022,11
+ATL7,Spain,Gen10,Yes,None,Robotic Arm,28.99,Low,715910.64,Night,Europe,Amazon Logistics,No,Vanderlande,2008,11
+ORD5,Japan,Gen11,Yes,Full,Palletizer,28.99,Medium,1079070.62,Night,Europe,UPS,Yes,Siemens,2019,4
+JFK9,Japan,Gen11,No,None,Packaging Machine,30.25,Medium,1062892.38,Night,North America,DHL,Yes,Integrated,2011,11
+SEA9,Germany,Gen9,Yes,None,Robotic Arm,30.25,Lowest,421441.38,Night,North America,DHL,No,Integrated,1995,11
+DEN6,Japan,Gen10,No,Full,Sorter,15.5,Low,720129.15,Morning,Asia-Pacific,FedEx,No,Vanderlande,2003,15
+SEA3,Spain,Gen10,No,None,Packaging Machine,15.5,Low,649985.43,Morning,Asia-Pacific,UPS,No,Integrated,2003,11
+JFK5,USA,Gen9,Yes,Partial,Robotic Arm,28.99,Lowest,489891.31,Morning,Europe,FedEx,No,Siemens,1993,18
+HND3,Germany,Gen9,No,Full,Robotic Arm,15.5,Lowest,420640.16,Evening,Asia-Pacific,FedEx,Yes,Integrated,1995,13
+MAD8,Spain,Gen11,Yes,Full,Packaging Machine,30.25,Medium,947009.31,Afternoon,North America,FedEx,No,Integrated,2019,5
+BOS3,Japan,Gen9,Yes,Partial,Robotic Arm,28.99,Lowest,423415.27,Night,Europe,FedEx,Yes,Integrated,1994,17
+LAX5,Germany,Gen11,Yes,Full,Sorter,28.99,Medium,915718.44,Afternoon,Europe,DHL,Yes,Integrated,2017,7
+LAX9,UK,Gen10,Yes,Partial,Packaging Machine,15.5,Low,707609.21,Morning,Asia-Pacific,UPS,No,Dematic,2002,20
+BOS4,Japan,Gen10,No,Full,Sorter,15.5,Low,713814.17,Evening,Asia-Pacific,UPS,No,Siemens,2008,1
+DEN2,UK,Gen11,No,Partial,Conveyor,28.99,Medium,1091119.51,Morning,Europe,Amazon Logistics,Yes,Dematic,2013,3
+BOS8,France,Gen11,Yes,Partial,Robotic Arm,15.5,Medium,1007796.29,Morning,Asia-Pacific,Amazon Logistics,Yes,Integrated,2018,10
+HND4,France,Gen10,No,None,Sorter,15.5,Low,683140.61,Afternoon,Asia-Pacific,Amazon Logistics,Yes,Dematic,2002,11
+CDG4,Germany,Gen11,Yes,Full,Packaging Machine,15.5,Medium,977972.26,Morning,Asia-Pacific,UPS,No,Dematic,2015,19
+HND5,Germany,Gen9,Yes,Partial,Palletizer,30.25,Lowest,458078.09,Afternoon,North America,DHL,Yes,Vanderlande,1992,14
+LAX7,UK,Gen10,No,Full,Robotic Arm,15.5,Low,745059.03,Afternoon,Asia-Pacific,DHL,Yes,Siemens,2004,15
+DEN4,Japan,Gen11,Yes,None,Conveyor,15.5,Medium,982408.52,Evening,Asia-Pacific,FedEx,Yes,Dematic,2014,11
+MIA5,Germany,Gen11,Yes,Partial,Packaging Machine,30.25,Medium,919875.8,Evening,North America,Amazon Logistics,Yes,Dematic,2014,1
+SEA4,Germany,Gen12,Yes,Partial,Robotic Arm,30.25,Highest,1619384.01,Night,North America,UPS,Yes,Vanderlande,2021,20
+LHR6,Spain,Gen11,No,Partial,Conveyor,15.5,Medium,1027008.79,Morning,Asia-Pacific,DHL,Yes,Integrated,2012,10
+DEN9,Japan,Gen12,No,Full,Robotic Arm,15.5,Highest,1268579.18,Night,Asia-Pacific,FedEx,No,Vanderlande,2024,1
+DFW1,USA,Gen9,Yes,None,Conveyor,28.99,Lowest,491625.96,Night,Europe,FedEx,Yes,Siemens,1999,11
+LHR1,UK,Gen9,Yes,Partial,Sorter,30.25,Lowest,488018.97,Afternoon,North America,DHL,Yes,Integrated,1998,6
+ORD1,Spain,Gen9,No,None,Robotic Arm,15.5,Lowest,418663.96,Morning,Asia-Pacific,FedEx,Yes,Integrated,1995,11
+LAX2,UK,Gen11,Yes,Full,Conveyor,30.25,Medium,1047148.6,Night,North America,DHL,Yes,Dematic,2019,12
+ORD8,Germany,Gen11,No,Partial,Conveyor,15.5,Medium,931142.42,Evening,Asia-Pacific,UPS,Yes,Dematic,2018,13
+ORD7,UK,Gen12,Yes,Partial,Palletizer,28.99,Highest,1264352.1,Night,Europe,FedEx,No,Integrated,2020,14
+LHR9,France,Gen11,No,Full,Sorter,30.25,Medium,1077322.28,Night,North America,Amazon Logistics,No,Dematic,2011,18
+MIA6,UK,Gen10,Yes,Partial,Packaging Machine,15.5,Low,699631.62,Afternoon,Asia-Pacific,FedEx,No,Siemens,2006,5
+MIA9,Germany,Gen12,No,None,Sorter,28.99,Highest,1391187.37,Afternoon,Europe,DHL,Yes,Vanderlande,2023,11
+DFW7,Germany,Gen11,No,None,Palletizer,15.5,Medium,1033557.69,Night,Asia-Pacific,Amazon Logistics,No,Vanderlande,2017,11
+CDG3,USA,Gen12,Yes,Full,Sorter,30.25,Highest,1650048.25,Morning,North America,FedEx,Yes,Dematic,2021,12
+LHR2,USA,Gen11,No,Full,Sorter,28.99,Medium,1064134.52,Afternoon,Europe,UPS,No,Integrated,2013,12
+HND8,Japan,Gen10,Yes,Partial,Sorter,30.25,Low,635864.68,Morning,North America,DHL,No,Vanderlande,2007,1
+LAX1,UK,Gen9,No,Full,Packaging Machine,28.99,Lowest,496233.95,Afternoon,Europe,Amazon Logistics,No,Integrated,1997,13
+MAD2,Spain,Gen11,No,Full,Conveyor,28.99,Medium,912551.39,Afternoon,Europe,UPS,Yes,Integrated,2014,3
+DEN8,Japan,Gen12,No,Full,Conveyor,28.99,Highest,1654605.84,Afternoon,Europe,FedEx,Yes,Vanderlande,2020,2
+ORD9,France,Gen12,No,Partial,Sorter,28.99,Highest,1344475.81,Afternoon,Europe,UPS,No,Vanderlande,2021,7
+ATL8,USA,Gen9,No,Full,Robotic Arm,30.25,Lowest,430482.83,Afternoon,North America,Amazon Logistics,Yes,Siemens,1993,20
+HND7,UK,Gen9,No,Partial,Palletizer,30.25,Lowest,462932.49,Afternoon,North America,UPS,No,Vanderlande,1993,11
+SFO6,UK,Gen9,No,Partial,Conveyor,30.25,Lowest,403014.72,Afternoon,North America,DHL,No,Dematic,1996,14
+JFK1,Germany,Gen12,No,Full,Sorter,15.5,Highest,1340589.11,Morning,Asia-Pacific,FedEx,Yes,Dematic,2020,12
+MAD4,Germany,Gen11,No,Partial,Conveyor,30.25,Medium,1049164.73,Afternoon,North America,UPS,Yes,Siemens,2015,15
+HND2,UK,Gen9,Yes,Partial,Packaging Machine,15.5,Lowest,410052.16,Night,Asia-Pacific,UPS,No,Integrated,1997,11
+FRA1,France,Gen11,No,Partial,Conveyor,28.99,Medium,1071312.51,Evening,Europe,Amazon Logistics,No,Vanderlande,2015,8
+ATL1,Japan,Gen10,No,Full,Robotic Arm,30.25,Low,637004.09,Morning,North America,FedEx,No,Integrated,2001,7
+ATL5,Japan,Gen11,Yes,Full,Packaging Machine,30.25,Medium,936818.37,Afternoon,North America,DHL,No,Siemens,2017,6
+SFO8,France,Gen9,Yes,Partial,Conveyor,28.99,Lowest,406948.75,Afternoon,Europe,UPS,No,Vanderlande,1991,16
+LHR8,Germany,Gen11,Yes,Partial,Sorter,28.99,Medium,954223.87,Afternoon,Europe,UPS,Yes,Integrated,2011,1
+MIA1,Germany,Gen11,Yes,None,Sorter,30.25,Medium,1083665.24,Morning,North America,FedEx,Yes,Vanderlande,2019,11
+MIA2,Spain,Gen11,No,Full,Palletizer,30.25,Medium,1027610.98,Evening,North America,UPS,No,Integrated,2019,18
+SEA1,USA,Gen10,No,None,Conveyor,30.25,Low,767880.91,Night,North America,Amazon Logistics,Yes,Dematic,2002,11
+BOS5,Spain,Gen12,No,Full,Sorter,28.99,Highest,1447906.37,Afternoon,Europe,DHL,Yes,Vanderlande,2023,12
+CDG8,USA,Gen9,Yes,Full,Robotic Arm,15.5,Lowest,477554.28,Morning,Asia-Pacific,Amazon Logistics,Yes,Siemens,1998,9
+MIA3,Japan,Gen9,Yes,None,Sorter,15.5,Lowest,400110.15,Evening,Asia-Pacific,DHL,Yes,Integrated,1995,11
+BOS7,Japan,Gen12,No,None,Packaging Machine,15.5,Highest,1675078.4,Evening,Asia-Pacific,DHL,No,Dematic,2022,11
+DFW8,Spain,Gen10,Yes,None,Packaging Machine,30.25,Low,751271.57,Morning,North America,UPS,No,Siemens,2002,11
+CDG9,Germany,Gen10,No,Partial,Sorter,30.25,Low,675726.27,Morning,North America,DHL,No,Siemens,2004,20
+BOS1,Japan,Gen12,Yes,None,Palletizer,15.5,Highest,1592762.24,Afternoon,Asia-Pacific,UPS,No,Integrated,2022,11
+ATL9,USA,Gen12,No,Partial,Robotic Arm,30.25,Highest,1552279.85,Night,North America,UPS,Yes,Integrated,2025,17
+FRA8,USA,Gen10,Yes,Full,Palletizer,30.25,Low,723484.26,Morning,North America,UPS,No,Siemens,2007,6
+ORD2,Germany,Gen12,Yes,Full,Packaging Machine,15.5,Highest,1650970.59,Night,Asia-Pacific,FedEx,No,Siemens,2021,6
+MIA8,Spain,Gen10,Yes,None,Palletizer,28.99,Low,795737.74,Morning,Europe,DHL,Yes,Vanderlande,2009,11

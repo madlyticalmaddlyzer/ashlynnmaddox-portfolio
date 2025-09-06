@@ -1,0 +1,11 @@
+WEATHER_IMPACT,WEATHER_TYPE,DOWNTIME_HOURS
+Yes,Hurricane,48
+Yes,Tornado,18
+Yes,Heavy Rain,10
+Yes,Snowstorm,12
+Yes,Flood,24
+Yes,Typhoon,40
+Yes,Tropical Storm,8
+Yes,Hurricane,72
+Yes,Extreme Heat,16
+Yes,Severe Thunderstorm,6

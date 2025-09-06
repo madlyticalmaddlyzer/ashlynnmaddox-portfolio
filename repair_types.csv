@@ -1,0 +1,21 @@
+REPAIR_TYPE_ID,REPAIR_TYPE_NAME,DESCRIPTION,REPAIR_COST
+11,None,None,0
+13,Control Panel Replacement,Replace malfunctioning control panels for smoother operation,320000
+2,Motor Replacement,Install a new motor to improve sorter efficiency,350000
+1,Conveyor Belt Replacement,Replace the conveyor belt to ensure smooth material flow,250000
+14,Safety System Upgrade,Enhance safety systems to meet updated standards,550000
+17,Robotic Unit Replacement,Replace faulty robotic units for automation reliability,800000
+18,Backup Power Installation,Install backup power systems for uninterrupted operations,750000
+3,Sensor Calibration,Recalibrate sensors for better sorting accuracy,150000
+4,Frame Reinforcement,Strengthen the sorter frame to handle increased load capacity,400000
+10,Sorting Arm Replacement,Replace damaged or worn-out sorting arms,300000
+7,Electrical System Overhaul,Replace outdated electrical components for reliability,450000
+9,Automation System Update,Update automation systems for better integration,700000
+12,Hydraulic System Maintenance,Ensure hydraulic systems are functioning properly,400000
+19,Material Flow Optimization,Improve material flow for better efficiency,500000
+5,Software Upgrade,Upgrade sorter software to enhance functionality,500000
+6,Emergency Repair,Immediate repair to resolve urgent issues causing downtime,600000
+8,Impact Sensor Replacement,Install new sensors to improve damage detection,200000
+16,Lubrication System Repair,Ensure proper lubrication to minimize wear and tear,200000
+15,Gearbox Maintenance,Inspect and repair gearbox for improved performance,290000
+20,Sorting Mechanism Adjustment,Adjust sorting mechanisms to improve throughput,350000
