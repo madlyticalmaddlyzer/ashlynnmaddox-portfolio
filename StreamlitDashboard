@@ -1,0 +1,214 @@
+# Import python packages
+import streamlit as st
+from snowflake.snowpark.context import get_active_session
+import pandas as pd
+import altair as alt
+
+helpful_links = [
+    "https://docs.streamlit.io",
+    "https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit",
+    "https://github.com/Snowflake-Labs/snowflake-demo-streamlit",
+    "https://docs.snowflake.com/en/release-notes/streamlit-in-snowflake"
+]
+
+# Write directly to the app
+st.title("Ashlynn Maddox Oracle/ Snowflake/ Streamlit Project")
+st.write("I designed a data-driven pipeline that starts with a Snowflake data warehouse and ends with an interactive dashboard built in Streamlit to simulate a real-world analytics scenario similar to how a company like Amazon might investigate and reduce costly reliability disruptions in the warehouses.")  
+
+
+st.markdown("""
+- :snowflake: [My GitHub Home for the Warehouse Optimization Project](https://github.com/madlyticalmaddlyzer/ashlynnmaddox-portfolio/blob/Amazon-Warehouse-Optimization-Project/README.md)
+- :memo: [Oracle and Snowflake Code](https://github.com/madlyticalmaddlyzer/ashlynnmaddox-portfolio/blob/Amazon-Warehouse-Optimization-Project/snowflake%20warehouse%20jam%20data%20project.txt)
+""")
+
+# Get Snowflake session
+session = get_active_session()
+
+# Helper function to format numbers with commas
+def format_numbers(df, cols):
+    for col in cols:
+        df[col] = df[col].apply(lambda x: f"{int(x):,}" if pd.notnull(x) else "")
+    return df
+
+st.title("Amazon Warehouse Optimization Dashboard")
+
+# 1. Top sites with the most costly jams
+query1 = """
+SELECT site_id, SUM(jam_costs) AS total_cost
+FROM jams
+GROUP BY site_id
+ORDER BY total_cost DESC
+LIMIT 60
+"""
+top_jams_df = session.sql(query1).to_pandas()
+top_jams_df.columns = [col.lower() for col in top_jams_df.columns]
+
+chart1 = alt.Chart(top_jams_df).mark_bar().encode(
+    x=alt.X('site_id', sort='-y', title='Site ID'),
+    y=alt.Y('total_cost', title='Total Jam Cost'),
+    color=alt.Color('site_id', title='Site ID'),  
+    tooltip=[
+        alt.Tooltip('site_id', title='Site'),
+        alt.Tooltip('total_cost', title='Total Cost', format=',')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Top 10 Sites by Jam Cost")
+st.altair_chart(chart1, use_container_width=True)
+
+
+
+# 2. Repair types associated with highest jam costs
+query2 = """
+SELECT 
+    rt.repair_type_name,
+    SUM(j.jam_costs) AS total_jam_cost,
+    AVG(rt.repair_cost) AS avg_repair_cost
+FROM jams j
+JOIN warehouse w ON j.site_id = w.site_name
+JOIN repair_types rt ON w.repair_type_id = rt.repair_type_id
+GROUP BY rt.repair_type_name
+ORDER BY total_jam_cost DESC
+LIMIT 10
+"""
+repair_costs_df = session.sql(query2).to_pandas()
+repair_costs_df.columns = [col.lower() for col in repair_costs_df.columns]
+
+chart2 = alt.Chart(repair_costs_df).mark_bar().encode(
+    x=alt.X('repair_type_name', sort='-y', title='Repair Type'),
+    y=alt.Y('total_jam_cost', title='Total Jam Cost'),
+    color=alt.Color('repair_type_name', title='Repair Type'),
+    tooltip=[
+        alt.Tooltip('repair_type_name', title='Repair Type'),
+        alt.Tooltip('total_jam_cost', title='Total Jam Cost', format=','),
+        alt.Tooltip('avg_repair_cost', title='Avg Repair Cost', format=',.2f')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Top Repair Types by Jam Cost")
+st.altair_chart(chart2, use_container_width=True)
+
+
+# Chart 2a: Top Repair Types by Average Repair Cost
+chart2a = alt.Chart(repair_costs_df).mark_bar().encode(
+    x=alt.X('repair_type_name', sort='-y', title='Repair Type'),
+    y=alt.Y('avg_repair_cost', title='Average Repair Cost'),
+    color=alt.Color('repair_type_name', title='Repair Type'),  # color by repair type
+    tooltip=[
+        alt.Tooltip('repair_type_name', title='Repair Type'),
+        alt.Tooltip('avg_repair_cost', title='Avg Repair Cost', format=',.2f')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Top Repair Types by Average Repair Cost")
+st.altair_chart(chart2a, use_container_width=True)
+
+
+
+
+
+# 3. Maintenance schedules correlation with jams & costs
+query3 = """
+SELECT 
+    pm.schedule_frequency,
+    pm.maintenance_type,
+    COUNT(j.site_id) AS number_of_jams,
+    SUM(j.jam_costs) AS total_jam_cost,
+    AVG(rt.repair_cost) AS avg_repair_cost
+FROM jams j
+JOIN warehouse w ON j.site_id = w.site_name
+JOIN repair_types rt ON w.repair_type_id = rt.repair_type_id
+JOIN pm_schedule pm ON rt.schedule_id = pm.schedule_id
+GROUP BY pm.schedule_frequency, pm.maintenance_type
+ORDER BY total_jam_cost ASC
+LIMIT 10
+"""
+maint_df = session.sql(query3).to_pandas()
+maint_df.columns = [col.lower() for col in maint_df.columns]
+
+chart3 = alt.Chart(maint_df).mark_bar().encode(
+    x=alt.X('maintenance_type', sort='-y', title='Maintenance Type'),
+    y=alt.Y('total_jam_cost', title='Total Jam Cost'),
+    tooltip=[
+        alt.Tooltip('maintenance_type'),
+        alt.Tooltip('schedule_frequency'),
+        alt.Tooltip('number_of_jams', format=','),
+        alt.Tooltip('total_jam_cost', format=','),
+        alt.Tooltip('avg_repair_cost', format=',.2f')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Maintenance Schedules Correlated with Lower Jam Costs")
+st.altair_chart(chart3, use_container_width=True)
+
+
+
+
+# 4. Weather impact on downtime and jams
+query4 = """
+SELECT
+    wd.weather_type,
+    SUM(wd.downtime_hours) AS total_downtime,
+    SUM(j.jam_costs) AS total_jam_cost
+FROM weather_disruptions wd
+LEFT JOIN warehouse w ON w.region = wd.weather_disruption_id
+LEFT JOIN jams j ON w.site_name = j.site_id
+GROUP BY wd.weather_type
+ORDER BY total_jam_cost DESC
+
+"""
+weather_df = session.sql(query4).to_pandas()
+weather_df.columns = [col.lower() for col in weather_df.columns]
+
+chart4 = alt.Chart(weather_df).mark_bar().encode(
+    x=alt.X('weather_type', sort='-y', title='Weather Type'),
+    y=alt.Y('total_jam_cost', title='Total Jam Cost'),
+    color=alt.Color('weather_type', legend=None),
+    tooltip=[
+        alt.Tooltip('weather_type'),
+        alt.Tooltip('total_downtime', format=','),
+        alt.Tooltip('total_jam_cost', format=',')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Top Weather Types by Total Jam Cost")
+st.altair_chart(chart4, use_container_width=True)
+
+
+
+
+
+
+
+# 5. Factors making jams more frequent or costly
+query5 = """
+SELECT
+    w.region,
+    w.equipment_type,
+    w.automation_level,
+    COUNT(j.site_id) AS jam_count,
+    SUM(j.jam_costs) AS total_jam_cost
+FROM warehouse w
+JOIN jams j ON w.site_name = j.site_id
+GROUP BY w.region, w.equipment_type, w.automation_level
+ORDER BY total_jam_cost DESC
+LIMIT 10
+"""
+factors_df = session.sql(query5).to_pandas()
+factors_df.columns = [col.lower() for col in factors_df.columns]
+
+chart5 = alt.Chart(factors_df).mark_bar().encode(
+    x=alt.X('equipment_type', sort='-y', title='Equipment Type'),
+    y=alt.Y('total_jam_cost', title='Total Jam Cost'),
+    color='region',
+    tooltip=[
+        alt.Tooltip('region'),
+        alt.Tooltip('equipment_type'),
+        alt.Tooltip('automation_level'),
+        alt.Tooltip('jam_count', format=','),
+        alt.Tooltip('total_jam_cost', format=',')
+    ]
+).properties(width=700, height=400)
+
+st.subheader("Factors Influencing Jam Frequency and Costs")
+st.altair_chart(chart5, use_container_width=True)
