@@ -5162,8 +5162,220 @@ SELECT * FROM weather;
 
 
 
+SNOWFLAKE SQL 
+
+use role accountadmin;
+use warehouse compute_wh;
+
+create or replace schema whschema;
+
+
+CREATE OR REPLACE TABLE warehouse (
+    site_name VARCHAR(10) PRIMARY KEY,
+    warehouse_location VARCHAR(50),
+    generation_type VARCHAR(10),
+    sister_site VARCHAR(3),
+    equipment_type VARCHAR(50),
+    automation_level VARCHAR(10),
+    average_throughput NUMBER,
+    peak_hours VARCHAR(20),
+    region VARCHAR(50),
+    primary_carrier VARCHAR(50),
+    weather_impact VARCHAR(3),
+    vendor VARCHAR(50),
+    year_built NUMBER(4),
+    lph NUMBER(10,2),
+    repair_status VARCHAR(10),
+    repair_type_id NUMBER
+);
+
+
+
+CREATE OR REPLACE TABLE repair_types (
+    repair_type_id NUMBER PRIMARY KEY,
+    repair_type_name VARCHAR(50) UNIQUE NOT NULL,
+    description VARCHAR(255),
+    repair_cost NUMBER(10,2)
+);
+
+
+
+CREATE OR REPLACE TABLE jams (
+    site_id VARCHAR(5) PRIMARY KEY,
+    daily_jams NUMBER,
+    dth DECIMAL(4,2),
+    jam_costs NUMBER,
+    maintenance_hours NUMBER
+);
+
+
+
+
+CREATE TABLE WEATHER_DISRUPTIONS (
+    WEATHER_IMPACT VARCHAR(10),
+    WEATHER_DISRUPTION_ID VARCHAR(50) NOT NULL,
+    DISRUPTION_DATE DATE NOT NULL,
+    WEATHER_TYPE VARCHAR(50),
+    DOWNTIME_HOURS NUMBER
+);
+
+
+
+ALTER TABLE WEATHER_DISRUPTIONS 
+ADD CONSTRAINT PK_WEATHER_DISRUPTIONS PRIMARY KEY (WEATHER_DISRUPTION_ID);
+
+
+CREATE TABLE WEATHER (
+    WEATHER_IMPACT VARCHAR(10),
+    WEATHER_TYPE VARCHAR(50),
+    DOWNTIME_HOURS NUMBER
+);
+
+
+
+INSERT INTO WEATHER_DISRUPTIONS (WEATHER_IMPACT, WEATHER_DISRUPTION_ID, DISRUPTION_DATE, WEATHER_TYPE, DOWNTIME_HOURS)
+VALUES 
+    ('Yes', 'Asia-Pacific', '2025-03-01', 'Hurricane', 48),
+    ('Yes', 'Europe', '2025-03-05', 'Flood', 24),
+    ('Yes', 'North America', '2025-03-10', 'Snowstorm', 12),
+    ('Yes', 'Asia-Pacific', '2025-03-15', 'Tropical Storm', 8),
+    ('Yes', 'Europe', '2025-03-20', 'Extreme Heat', 16),
+    ('Yes', 'North America', '2025-03-25', 'Tornado', 18),
+    ('Yes', 'Asia-Pacific', '2025-03-30', 'Heavy Rain', 10),
+    ('Yes', 'Europe', '2025-04-01', 'Hurricane', 72),
+    ('Yes', 'North America', '2025-04-05', 'Severe Thunderstorm', 6),
+    ('Yes', 'Asia-Pacific', '2025-04-10', 'Typhoon', 40);
+
+
+
+
+INSERT INTO WEATHER (WEATHER_IMPACT, WEATHER_TYPE, DOWNTIME_HOURS)
+SELECT
+  WEATHER_IMPACT,
+  WEATHER_TYPE,
+  ROUND(AVG(DOWNTIME_HOURS), 2) AS DOWNTIME_HOURS
+FROM WEATHER_DISRUPTIONS
+GROUP BY WEATHER_IMPACT, WEATHER_TYPE;
+
+
+
+drop table warehouse_jam_data;
+
+
+SELECT * FROM whshcema.warehouse LIMIT 10;
+SELECT COUNT(*) FROM whshcema.warehouse;
+
+
+----- In this section I am setting up the foreign keys 
+
+ALTER TABLE WAREHOUSE
+ADD CONSTRAINT fk_repair_type
+FOREIGN KEY (REPAIR_TYPE_ID) REFERENCES REPAIR_TYPES(REPAIR_TYPE_ID);
+
+
+DESC TABLE WEATHER_DISRUPTIONS;
+DESC TABLE WAREHOUSE;
+
+
+
+SELECT *
+FROM WAREHOUSE w
+JOIN WEATHER_DISRUPTIONS wd
+  ON w.REGION = wd.WEATHER_DISRUPTION_ID;
+
+
+ALTER TABLE WAREHOUSE
+ADD CONSTRAINT unique_region UNIQUE (REGION);
+
+ALTER TABLE WEATHER_DISRUPTIONS
+ADD CONSTRAINT fk_weather_region
+FOREIGN KEY (WEATHER_DISRUPTION_ID) REFERENCES WAREHOUSE(REGION);
+
+
+select * from warehouse;
+
+select * from jams;
+
+ALTER TABLE JAMS
+MODIFY SITE_ID VARCHAR(10);
+
+
+ALTER TABLE warehouse
+MODIFY SITE_NAME VARCHAR(10);
+
+
+ALTER TABLE JAMS
+ADD CONSTRAINT fk_jams_site
+FOREIGN KEY (SITE_ID) REFERENCES WAREHOUSE(SITE_NAME);
 
 
 
 
 
+  
+  
+--- which warehouse expereinced the most downtime 
+SELECT 
+  w.SITE_NAME,
+  w.REGION,
+  SUM(wd.DOWNTIME_HOURS) AS total_weather_downtime
+FROM WAREHOUSE w
+JOIN WEATHER_DISRUPTIONS wd
+  ON w.REGION = wd.WEATHER_DISRUPTION_ID
+GROUP BY w.SITE_NAME, w.REGION
+ORDER BY total_weather_downtime DESC;
+
+
+
+
+
+CREATE TABLE pm_schedule (
+    schedule_id NUMBER PRIMARY KEY,
+    site_name VARCHAR(100),
+    maintenance_type VARCHAR(50),
+    schedule_frequency VARCHAR(20),
+    performed_by VARCHAR(100)
+);
+
+
+
+select * from pm_schedule;
+
+ALTER TABLE pm_schedule
+DROP COLUMN site_name;
+
+
+ALTER TABLE repair_types
+ADD COLUMN schedule_id NUMBER;
+
+
+UPDATE repair_types
+SET schedule_id = (
+    SELECT schedule_id
+    FROM (
+        SELECT schedule_id
+        FROM pm_schedule
+        QUALIFY ROW_NUMBER() OVER (ORDER BY RANDOM()) = 1
+    )
+);
+
+
+
+ALTER TABLE repair_types
+ADD CONSTRAINT fk_schedule_id
+FOREIGN KEY (schedule_id) REFERENCES pm_schedule(schedule_id);
+
+
+
+
+
+
+
+
+
+
+How tables connect:
+jams → warehouse (via jams.site_id = warehouse.site_name)
+warehouse → repair_types (via warehouse.repair_type_id = repair_types.repair_type_id)
+repair_types → pm_schedule (via repair_types.schedule_id = pm_schedule.schedule_id)
+warehouse → weather_disruptions (via warehouse.region = weather_disruptions.weather_disruption_id)
