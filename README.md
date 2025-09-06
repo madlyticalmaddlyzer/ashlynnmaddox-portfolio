@@ -6,18 +6,18 @@ I'm an Operations Strategy & Analytics leader with 4+ years of experience at Ama
 
 I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, where I’ve conducted research on topics ranging from wine quality economics to data visualization for operational KPIs.
 
-This portfolio showcases selected non-sensitive projects across my academic and professional journey.
+This portfolio showcases a selected non-sensitive mock project across my academic and professional journey.
 
 ## 🛠️ What I Built
 
-To simulate a real-world analytics scenario similar to how a company like Amazon might investigate and reduce logistics inefficiencies (basically costly disruptions in the warehouses in the name of operations). I designed a data-driven pipeline that starts with a Snowflake data warehouse and ends with an interactive dashboard built in Streamlit.
+I designed a data-driven pipeline that starts with a Snowflake data warehouse and ends with an interactive dashboard built in Streamlit. This was done to simulate a real-world analytics scenario similar to how a global logistics company might investigate and reduce costly equipment disruptions in the warehouses.
 
 ### 🔗 Data Architecture
 I created a SQL-based data warehouse centered around a jam_data table, and connected it with multiple supporting tables, including:
 
 - **repair_types** – classifying response and repair categories
 - **weather_disruptions** – identifying weather-related impact on operations
-- **jam_costs** – estimating the financial impact of each jam
+- **jams** – estimating the financial impact of each jam
 - **repair_costs** – quantifying the cost of operational fixes
 
 
