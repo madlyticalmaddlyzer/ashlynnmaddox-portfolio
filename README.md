@@ -10,7 +10,7 @@ This portfolio showcases selected non-sensitive projects across my academic and 
 
 ## 🛠️ What I Built
 
-To simulate a real-world analytics scenario similar to how a company like Amazon might investigate and reduce logistics inefficiencies. I designed a data-driven pipeline that starts with a Snowflake data warehouse and ends with an interactive dashboard built in Streamlit.
+To simulate a real-world analytics scenario similar to how a company like Amazon might investigate and reduce logistics inefficiencies (basically costly disruptions in the warehouses in the name of operations). I designed a data-driven pipeline that starts with a Snowflake data warehouse and ends with an interactive dashboard built in Streamlit.
 
 ### 🔗 Data Architecture
 I created a SQL-based data warehouse centered around a jam_data table, and connected it with multiple supporting tables, including:
