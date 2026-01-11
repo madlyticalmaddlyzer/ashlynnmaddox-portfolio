@@ -2,9 +2,8 @@
 
 Welcome to my portfolio.
 
-I'm an Operations Strategy & Analytics leader with 4+ years of experience at Amazon, where I've led global initiatives that delivered over $18M in business impact. My work bridges strategy, data analysis, and cross-functional execution spanning supply chain optimization, process improvement, and internal product development.
 
-I'm currently pursuing an MBA in Business Analytics and hold a BA in Economics, where I’ve conducted research on topics ranging from wine quality economics to data visualization for operational KPIs.
+I'm an Technical Program Manager specialized in the lifecycle engineering and sustainment of critical autonomous infrastructure with 5+ years of experience at Amazon, where I've led global initiatives that delivered over $18M in business impact. My work bridges strategy, data analysis, and cross-functional execution spanning supply chain optimization, process improvement, and internal product development. I have a proven track record leading cross-functional teams to stabilize global assets through data-driven Quality Assurance and Capital Investment (CapEx/OpEx) governance. I bridge the gap between technical engineering and business operations to optimize global program delivery and reduce downtime. 
 
 This portfolio showcases selected non-sensitive projects across my academic and professional journey.
 
